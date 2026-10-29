@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora - Trabajo en Grupo</title>
+</head>
+<body>
+    <div style="text-align: center; margin-top: 50px;">
+        <h1>Módulo de Operación</h1>
+        <input type="number" id="num1" placeholder="Número 1">
+        <input type="number" id="num2" placeholder="Número 2">
+        <br><br>
+        <!-- Cambia la función según la operación que te haya tocado: restar(), multiplicar(), etc. -->
+        <button onclick="operar()">Calcular</button>
+        <h2 id="resultado">Resultado: </h2>
+    </div>
+
+    <script>
+        function operar() {
+            const n1 = parseFloat(document.getElementById('num1').value) || 0;
+            const n2 = parseFloat(document.getElementById('num2').value) || 0;
+            
+            // Ejemplo con resta (cámbialo por tu operación asignada)
+            const resultado = n1 - n2; 
+            
+            document.getElementById('resultado').innerText = "Resultado: " + resultado;
+        }
+    </script>
+</body>
+</html>
